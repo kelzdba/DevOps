@@ -1,0 +1,13 @@
+# filepath: k8s/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-demo-app-service
+spec:
+  selector:
+    app: k8s-demo-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: NodePort
